@@ -274,7 +274,9 @@ func (c *CloudStore) GetSignURL(object string) (link string) {
 	switch c.StoreType {
 	case StoreCos:
 		link, err = c.client.(*CloudStore2.COS).GetSignURL(object, c.expire)
-		log.Printf("object: " + object + ", link: "+link)
+		if helper.Debug {
+			helper.Logger.Debug("object: " + object + ", link: "+link)
+		}
 	case StoreOss:
 		link, err = c.client.(*CloudStore2.OSS).GetSignURL(object, c.expire)
 	case StoreBos:
