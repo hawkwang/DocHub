@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"os"
 	"strings"
+	"log"
 
 	"github.com/PuerkitoBio/goquery"
 
@@ -273,7 +274,7 @@ func (c *CloudStore) GetSignURL(object string) (link string) {
 	switch c.StoreType {
 	case StoreCos:
 		link, err = c.client.(*CloudStore2.COS).GetSignURL(object, c.expire)
-		helper.Logger.Info("object: " + object + ", link: "+link)
+		log.Printf("object: " + object + ", link: "+link)
 	case StoreOss:
 		link, err = c.client.(*CloudStore2.OSS).GetSignURL(object, c.expire)
 	case StoreBos:
