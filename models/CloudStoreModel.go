@@ -274,9 +274,6 @@ func (c *CloudStore) GetSignURL(object string) (link string) {
 	switch c.StoreType {
 	case StoreCos:
 		link, err = c.client.(*CloudStore2.COS).GetSignURL(object, c.expire)
-		if helper.Debug {
-			helper.Logger.Debug("object: " + object + ", link: "+link)
-		}
 	case StoreOss:
 		link, err = c.client.(*CloudStore2.OSS).GetSignURL(object, c.expire)
 	case StoreBos:
@@ -400,6 +397,6 @@ func (c *CloudStore) PingTest() (err error) {
 
 func (c *CloudStore) GetPublicDomain() (domain string) {
 	object := "test.dochub.test"
-	link := c.GetSignURL(object)
+	link := c.GetSignURL(object)	
 	return strings.TrimRight(strings.Split(link, object)[0], "/")
 }

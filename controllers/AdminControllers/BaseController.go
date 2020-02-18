@@ -49,7 +49,6 @@ func (this *BaseController) Prepare() {
 	this.Layout = "Admin/" + this.TplTheme + "/layout.html"
 	//当前模板静态文件
 	this.Data["TplStatic"] = "/static/Admin/" + this.TplTheme
-	//this.Data["PreviewDomain"] = beego.AppConfig.String("oss::PreviewUrl")
 	if cs, err := models.NewCloudStore(false); err == nil {
 		this.Data["PreviewDomain"] = cs.GetPublicDomain()
 	} else {
