@@ -59,7 +59,6 @@ func (this *BaseController) Prepare() {
 	this.Data["CopyrightDate"] = time.Now().Format("2006")
 
 	this.Data["PreviewDomain"] = ""
-
 	if cs, err := models.NewCloudStore(false); err == nil {
 		this.Data["PreviewDomain"] = cs.GetPublicDomain()
 	} else {

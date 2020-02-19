@@ -58,3 +58,8 @@ sitemap.xml
 store
 *.sh
 DocHub.exe~
+
+#the go.mod and go.sum
+go.mod
+go.sum
+
