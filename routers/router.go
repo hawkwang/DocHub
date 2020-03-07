@@ -2,8 +2,8 @@ package routers
 
 import (
 	"github.com/hawkwang/DocHub/controllers/AdminControllers"
-
 	"github.com/hawkwang/DocHub/controllers/HomeControllers"
+	"github.com/hawkwang/DocHub/controllers/WeixinControllers"
 	"github.com/hawkwang/DocHub/helper"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/context"
