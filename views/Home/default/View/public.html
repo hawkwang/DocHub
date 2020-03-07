@@ -108,7 +108,7 @@
             </span>
             <span class="wenku-score-tips color-gray"></span>
         </div>
-        <form role="form" method="post" action="/comment/{{.Doc.Id}}" class="wenku-comment-form">
+        <form  style="display: none;" role="form" method="post" action="/comment/{{.Doc.Id}}" class="wenku-comment-form">
             <div class="form-group">
                 <textarea name="Comment" rows="3" class="form-control" required="required" placeholder="文明评论，文明你我他"></textarea>
                 <input type="hidden" name="Score" id="score" value="0" />
@@ -131,7 +131,7 @@
         </form>
     </div>
 </div>
-<div class="panel panel-default wenku-noborder wenku-comment-list">
+<div class="panel panel-default wenku-noborder wenku-comment-list" style="display: none;" >
     <div class="panel-heading">评论列表</div>
     <div class="panel-body">
 
