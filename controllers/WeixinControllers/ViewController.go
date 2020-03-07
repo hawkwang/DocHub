@@ -20,15 +20,17 @@ type ViewController struct {
 func (this *ViewController) Get() {
 	id, _ := this.GetInt(":id")
 	if id < 1 {
-		this.Redirect("/", 302)
-		return
+		// this.Redirect("/", 302)
+		this.ResponseJson(false, "文档索引错误")
+		// return
 	}
 
 	doc, err := models.NewDocument().GetById(id)
 
 	// 文档不存在、查询错误、被删除，报 404
 	if err != nil || doc.Id <= 0 || doc.Status < models.DocStatusConverting {
-		this.Abort("404")
+		// this.Abort("404")
+		this.ResponseJson(false, "文档不存在、查询错误、被删除")
 	}
 
 	var cates []models.Category
@@ -84,7 +86,7 @@ func (this *ViewController) Get() {
 		// this.TplName = "svg.html"
 	}
 
-	this.Response(this.Data)
+	this.ResponseJson(true, "获得相关文档")
 
 }
 
