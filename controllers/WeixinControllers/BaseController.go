@@ -144,6 +144,13 @@ func (this *BaseController) ResponseJson(isSuccess bool, msg string, data ...int
 	this.StopRun()
 }
 
+//响应json
+func (this *BaseController) Response(data map[string]interface{}) {
+	this.Data["json"] = data
+	this.ServeJSON()
+	this.StopRun()
+}
+
 //单页
 func (this *BaseController) Pages() {
 	alias := this.GetString(":page")
