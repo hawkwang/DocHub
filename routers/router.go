@@ -19,6 +19,9 @@ func init() {
 
 	front()
 	back()
+
+	// weixin section
+	weixin()
 }
 
 //前台路由
@@ -55,7 +58,6 @@ func front() {
 	beego.Router("/segwd", &HomeControllers.UploadController{}, "get:SegWord")
 	beego.Router("/search/*", &HomeControllers.SearchController{})
 	beego.Router("/view/:id", &HomeControllers.ViewController{})
-	beego.Router("/viewme/:id", &HomeControllers.ViewController{})
 	beego.Router("/comment/:id", &HomeControllers.ViewController{}, "post:Comment")
 	beego.Router("/comment/list", &HomeControllers.ViewController{}, "get:GetComment")
 	beego.Router("/down/:id", &HomeControllers.ViewController{}, "get:Download")
@@ -107,4 +109,8 @@ func back() {
 	beego.Router("/admin/elasticsearch/rebuild", &AdminControllers.SysController{}, "get:RebuildAllIndex") //重建全量索引
 	beego.Router("/admin/test/send-email", &AdminControllers.SysController{}, "get:TestForSendingEmail")
 	//beego.Router("/admin/test/ping-oss", &AdminControllers.SysController{}, "get:TestOSS")
+}
+
+func weixin() {
+	beego.Router("/wx/view/:id", &WeixinControllers.ViewController{})
 }
