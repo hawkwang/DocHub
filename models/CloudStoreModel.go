@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"os"
 	"strings"
-	"log"
+	// "log"
 
 	"github.com/PuerkitoBio/goquery"
 
