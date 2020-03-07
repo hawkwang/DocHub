@@ -7,6 +7,7 @@ import (
 
 	"time"
 
+	"github.com/hawkwang/DocHub/controllers/HomeControllers"
 	"github.com/hawkwang/DocHub/helper"
 	"github.com/hawkwang/DocHub/models"
 	"github.com/astaxie/beego"
