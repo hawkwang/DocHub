@@ -55,6 +55,7 @@ func front() {
 	beego.Router("/segwd", &HomeControllers.UploadController{}, "get:SegWord")
 	beego.Router("/search/*", &HomeControllers.SearchController{})
 	beego.Router("/view/:id", &HomeControllers.ViewController{})
+	beego.Router("/viewme/:id", &HomeControllers.ViewController{})
 	beego.Router("/comment/:id", &HomeControllers.ViewController{}, "post:Comment")
 	beego.Router("/comment/list", &HomeControllers.ViewController{}, "get:GetComment")
 	beego.Router("/down/:id", &HomeControllers.ViewController{}, "get:Download")
