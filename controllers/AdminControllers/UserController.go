@@ -3,12 +3,12 @@ package AdminControllers
 import (
 	"fmt"
 
-	"github.com/TruthHun/DocHub/helper"
+	"github.com/hawkwang/DocHub/helper"
 
 	"strings"
 
-	"github.com/TruthHun/DocHub/helper/conv"
-	"github.com/TruthHun/DocHub/models"
+	"github.com/hawkwang/DocHub/helper/conv"
+	"github.com/hawkwang/DocHub/models"
 )
 
 //IT文库注册会员管理

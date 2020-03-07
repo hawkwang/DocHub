@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/TruthHun/DocHub/helper"
+	"github.com/hawkwang/DocHub/helper"
 	"github.com/astaxie/beego/orm"
 )
 

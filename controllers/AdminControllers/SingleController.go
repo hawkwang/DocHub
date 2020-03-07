@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/TruthHun/DocHub/models"
+	"github.com/hawkwang/DocHub/models"
 	"github.com/astaxie/beego/orm"
 )
 

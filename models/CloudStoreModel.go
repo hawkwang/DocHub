@@ -11,7 +11,7 @@ import (
 	"github.com/PuerkitoBio/goquery"
 
 	CloudStore2 "github.com/hawkwang/CloudStore"
-	"github.com/TruthHun/DocHub/helper"
+	"github.com/hawkwang/DocHub/helper"
 )
 
 type CloudStore struct {

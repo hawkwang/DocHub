@@ -3,10 +3,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/TruthHun/DocHub/controllers/HomeControllers"
-	"github.com/TruthHun/DocHub/helper"
-	"github.com/TruthHun/DocHub/models"
-	_ "github.com/TruthHun/DocHub/routers"
+	"github.com/hawkwang/DocHub/controllers/HomeControllers"
+	"github.com/hawkwang/DocHub/helper"
+	"github.com/hawkwang/DocHub/models"
+	_ "github.com/hawkwang/DocHub/routers"
 	"github.com/astaxie/beego"
 )
 

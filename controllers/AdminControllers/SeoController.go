@@ -1,6 +1,6 @@
 package AdminControllers
 
-import "github.com/TruthHun/DocHub/models"
+import "github.com/hawkwang/DocHub/models"
 
 type SeoController struct {
 	BaseController

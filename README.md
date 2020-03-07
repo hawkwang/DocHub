@@ -81,7 +81,7 @@ Thanks for [JetBrains](https://www.jetbrains.com/?from=DocHub)'s `free JetBrains
 ## 源码地址
 程序源码，托管在`GitHub`和`Gitee`
 
-- GitHub: https://github.com/truthhun/DocHub
+- GitHub: https://github.com/hawkwang/DocHub
 - Gitee: https://gitee.com/truthhun/DocHub
 
 <a name="qqgroup"></a>
@@ -276,12 +276,12 @@ https://www.sogou.com/web?query=filetype%3Apdf+%E5%85%A5%E9%97%A8%E6%95%99%E7%A8
 
 <a name="tpl-pc"></a>
 ### PC端模板
-- GitHub: https://github.com/truthhun/DocHubTemplate4PC
+- GitHub: https://github.com/hawkwang/DocHubTemplate4PC
 - Gitee: https://gitee.com/truthhun/DocHubTemplate4PC
 
 <a name="tpl-mobile"></a>
 ### 移动端模板
-- GitHub: https://github.com/truthhun/DocHubTemplate4Mobile
+- GitHub: https://github.com/hawkwang/DocHubTemplate4Mobile
 - Gitee: https://gitee.com/truthhun/DocHubTemplate4Mobile
 
 <a name="aboutus"></a>
