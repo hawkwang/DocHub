@@ -27,7 +27,7 @@ func (this *ViewController) Get() {
 
 	doc, err := models.NewDocument().GetById(id)
 
-	fmt.Println(doc)
+	// fmt.Println(doc)
 
 	// 文档不存在、查询错误、被删除，报 404
 	if err != nil || doc.Id <= 0 || doc.Status < models.DocStatusConverting {
