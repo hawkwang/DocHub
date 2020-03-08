@@ -83,6 +83,7 @@ func (this *BaseController) CheckLogin() int {
 func (this *BaseController) Xsrf() {
 	//使用的时候，直接在模板表单添加{{.xsrfdata}}
 	this.Data["xsrfdata"] = template.HTML(this.XSRFFormHTML())
+	fmt.Println(this.Data["xsrfdata"])
 }
 
 //检测用户登录的cookie是否存在
