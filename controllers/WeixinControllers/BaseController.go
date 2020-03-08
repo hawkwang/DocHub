@@ -140,22 +140,6 @@ func (this *BaseController) ResponseJson(isSuccess bool, msg string, data ...int
 		ret["data"] = data[0]
 	}
 	this.Data["json"] = ret
-	this.ServeJSON()
-	this.StopRun()
-}
-
-//响应json
-func (this *BaseController) ResponseJsonWithData(isSuccess bool, msg string) {
-	status := 0
-	if isSuccess {
-		status = 1
-	}
-	ret := map[string]interface{}{"status": status, "msg": msg}
-	if len(data) > 0 {
-		ret["data"] = data[0]
-	}
-	ret["data"] = this.Data
-	this.Data["json"] = ret
 	fmt.Println(this.Data)
 	this.ServeJSON()
 	this.StopRun()

@@ -86,8 +86,7 @@ func (this *ViewController) Get() {
 		// this.TplName = "svg.html"
 	}
 
-	//this.ResponseJson(true, "获得相关文档")
-	this.ResponseJsonWithData(true, "获得相关文档")
+	this.ResponseJson(true, "获得相关文档")
 
 }
 
