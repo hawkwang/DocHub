@@ -155,7 +155,7 @@ func (this *BaseController) ResponseJsonWithData(isSuccess bool, msg string) {
 	// 	ret["data"] = data[0]
 	// }
 	ret["data"] = this.Data
-	//this.Data["json"] = ret
+	this.Data["json"] = ret
 	this.ServeJSON()
 	this.StopRun()
 }
