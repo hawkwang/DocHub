@@ -27,6 +27,8 @@ func (this *ViewController) Get() {
 
 	doc, err := models.NewDocument().GetById(id)
 
+	fmt.Println(doc)
+
 	// 文档不存在、查询错误、被删除，报 404
 	if err != nil || doc.Id <= 0 || doc.Status < models.DocStatusConverting {
 		// this.Abort("404")
@@ -86,7 +88,7 @@ func (this *ViewController) Get() {
 		// this.TplName = "svg.html"
 	}
 
-	this.ResponseJson(true, "获得相关文档")
+	this.ResponseJson(true, "获得相关文档", doc)
 
 }
 

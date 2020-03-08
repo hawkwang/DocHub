@@ -140,7 +140,7 @@ func (this *BaseController) ResponseJson(isSuccess bool, msg string, data ...int
 		ret["data"] = data[0]
 	}
 	this.Data["json"] = ret
-	fmt.Println(this.Data)
+	// fmt.Println(this.Data)
 	this.ServeJSON()
 	this.StopRun()
 }
