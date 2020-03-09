@@ -114,8 +114,8 @@ func back() {
 func weixin() {
 	beego.Router("/wx/view/:id", &WeixinControllers.ViewController{})
 
-	beego.Router("/wx/user/login", &HomeControllers.UserController{}, "post:Login")
-	beego.Router("/wx/user/islogin", &HomeControllers.UserController{}, "get:CheckLogin")
-	beego.Router("/wx/user/logout", &HomeControllers.UserController{}, "get:Logout")
-	beego.Router("/wx/user/gettoken", &HomeControllers.UserController{}, "get:GetToken")
+	beego.Router("/wx/user/login", &WeixinControllers.UserController{}, "post:Login")
+	beego.Router("/wx/user/islogin", &WeixinControllers.UserController{}, "get:CheckLogin")
+	beego.Router("/wx/user/logout", &WeixinControllers.UserController{}, "get:Logout")
+	beego.Router("/wx/user/gettoken", &WeixinControllers.UserController{}, "get:GetToken")
 }
