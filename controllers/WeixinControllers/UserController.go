@@ -34,7 +34,7 @@ func (this *UserController) GetToken() {
 		currenttoken string
 		tokens []interface{}
 	)
-	currenttoken := this.XSRFToken()
+	currenttoken = this.XSRFToken()
 	tokens = append(tokens, currenttoken)
 	fmt.Println(tokens)
 	this.ResponseJson(true, "获得token", tokens)
