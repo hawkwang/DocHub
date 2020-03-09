@@ -83,7 +83,7 @@ func (this *BaseController) CheckLogin() int {
 func (this *BaseController) Xsrf() {
 	//使用的时候，直接在模板表单添加{{.xsrfdata}}
 	this.Data["xsrfdata"] = template.HTML(this.XSRFFormHTML())
-	token = this.XSRFToken()
+	token := this.XSRFToken()
 	fmt.Println(token)
 }
 
