@@ -2,20 +2,20 @@ package WeixinControllers
 
 import (
 	"fmt"
-	"path/filepath"
+	// "path/filepath"
 
-	"github.com/astaxie/beego"
+	// "github.com/astaxie/beego"
 
-	"strings"
+	// "strings"
 
-	"time"
+	// "time"
 
-	"os"
+	// "os"
 
 	"github.com/hawkwang/DocHub/helper"
-	"github.com/hawkwang/DocHub/helper/conv"
+	// "github.com/hawkwang/DocHub/helper/conv"
 	"github.com/hawkwang/DocHub/models"
-	"github.com/astaxie/beego/orm"
+	// "github.com/astaxie/beego/orm"
 	"github.com/astaxie/beego/validation"
 )
 
@@ -29,9 +29,14 @@ func (this *UserController) Prepare() {
 }
 
 func (this *UserController) GetToken() {
-	token := this.XSRFToken()
-	tokens = []interface{}{}
-	tokens = append(tokens, token)
+	
+	var (
+		currenttoken string
+		tokens []interface{}
+	)
+	currenttoken := this.XSRFToken()
+	tokens = append(tokens, currenttoken)
+	fmt.Println(tokens)
 	this.ResponseJson(true, "获得token", tokens)
 }
 
