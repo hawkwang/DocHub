@@ -109,6 +109,6 @@ func (this *ListController) Get() {
 	this.Data["PageId"] = "wenku-list"
 	
 	//this.TplName = "index.html"
-	this.ResponseJson(true, "获得相关文档", list)
+	this.ResponseJson(true, "获得相关文档", lists)
 
 }
