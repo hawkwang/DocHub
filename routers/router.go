@@ -120,6 +120,8 @@ func weixin() {
 	beego.Router("/wx/user/gettoken", &WeixinControllers.UserController{}, "get:GetToken")
 
 	beego.Router("/wx/view/:id", &WeixinControllers.ViewController{})
+	beego.Router("/wx/down/:id", &WeixinControllers.ViewController{}, "get:Download")
+
 
 	// 
 	beego.Router("/wx/list/:chanel", &WeixinControllers.ListController{})
