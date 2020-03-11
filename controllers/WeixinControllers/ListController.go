@@ -19,8 +19,7 @@ type ListController struct {
 
 func (this *ListController) Get() {
 
-	if this.BaseController.IsLogin < 0 
-	{
+	if this.BaseController.IsLogin < 0 	{
 		this.ResponseJson(false, "您当前处于未登录状态，请先登录")
 	}
 
