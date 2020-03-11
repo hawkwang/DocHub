@@ -119,13 +119,12 @@ func weixin() {
 	beego.Router("/wx/user/logout", &WeixinControllers.UserController{}, "get:Logout")
 	beego.Router("/wx/user/gettoken", &WeixinControllers.UserController{}, "get:GetToken")
 
+	// 用于单个文档的访问
 	beego.Router("/wx/view/:id", &WeixinControllers.ViewController{})
 	beego.Router("/wx/down/:id", &WeixinControllers.ViewController{}, "get:Download")
 
 
-	// 
+	// 用于文档列表的访问
 	beego.Router("/wx/list/:chanel", &WeixinControllers.ListController{})
 	beego.Router("/wx/list/:chanel/*", &WeixinControllers.ListController{})
-
-
 }

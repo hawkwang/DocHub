@@ -18,6 +18,11 @@ type ViewController struct {
 }
 
 func (this *ViewController) Get() {
+
+	if this.IsLogin <= 0 	{
+		this.ResponseJson(false, "您当前处于未登录状态，请先登录")
+	}
+
 	id, _ := this.GetInt(":id")
 	if id < 1 {
 		// this.Redirect("/", 302)
