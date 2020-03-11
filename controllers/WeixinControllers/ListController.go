@@ -19,6 +19,11 @@ type ListController struct {
 
 func (this *ListController) Get() {
 
+	if this.BaseController.IsLogin < 0 
+	{
+		this.ResponseJson(false, "您当前处于未登录状态，请先登录")
+	}
+
 	var (
 		pid, cid    int // parent id && category id
 		p, listRows = 1, this.Sys.ListRows
