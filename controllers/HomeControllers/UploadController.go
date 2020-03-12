@@ -84,6 +84,7 @@ func (this *UploadController) Post() {
 	}
 
 	// 文档处理
+	fmt.Println("UploadController Post " )
 	err = models.DocumentProcess(this.IsLogin, form)
 	if err != nil {
 		this.ResponseJson(false, err.Error())
