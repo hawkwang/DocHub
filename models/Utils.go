@@ -27,7 +27,7 @@ func DocumentProcess(uid int, form FormUpload) (err error) {
 	// 7. 总文档数增加
 	// 8. 用户积分和文档数量增加
 	// 9. 积分记录
-
+	fmt.Println("DocumentProcess - %v", "开始文档处理" )
 	sys, _ := NewSys().Get()
 	score := 0 // 文档已被上传的话，获得的积分为0
 
@@ -69,6 +69,7 @@ func DocumentProcess(uid int, form FormUpload) (err error) {
 		errRepeatedDoc = errors.New("您要分享的文档已存在，请勿再次分享")
 	)
 
+	fmt.Println("DocumentProcess - %v", "开始ComputeFileMD5" )
 	var file *os.File
 	file, err = os.Open(form.TmpFile)
 	if err == nil {
@@ -164,7 +165,7 @@ func DocumentProcess(uid int, form FormUpload) (err error) {
 		err = errRetry
 		return
 	}
-
+	fmt.Println("DocumentProcess - %v", "开始分类统计数增加" )
 	// 分类统计数增加
 	sqlCate := fmt.Sprintf("update `%v` set `Cnt`=`Cnt`+1 where `Id` in(?,?,?) limit 3", GetTableCategory())
 	if _, err = o.Raw(sqlCate, form.Cid, form.Chanel, form.Pid).Exec(); err != nil {
@@ -223,7 +224,7 @@ func DocumentConvert(tmpFile string, fileMD5 string, page ...int) (err error) {
 	// 8. 更新 document_store 表的信息，如页数、SVG宽高
 	// 9. 更新 document_info 中的文档转换状态为正常状态
 	// 10. 更新 document_text 中的文档内容信息
-
+	fmt.Println("DocumentConvert - %v", "开始" )
 	if _, err = os.Stat(tmpFile); err != nil {
 		helper.Logger.Error(err.Error())
 		return
@@ -355,7 +356,7 @@ func DocumentConvert(tmpFile string, fileMD5 string, page ...int) (err error) {
 		}
 
 	}()
-
+	fmt.Println("DocumentConvert - %v", "开始PDF 转 SVG" )
 	// PDF 转 SVG
 	for i := 0; i < maxPreview; i++ {
 		pageNO := i + 1
