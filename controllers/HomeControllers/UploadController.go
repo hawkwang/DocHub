@@ -57,7 +57,7 @@ func (this *UploadController) Post() {
 		form models.FormUpload
 		err  error
 	)
-
+	fmt.Println("UploadController Post - starting ......" )
 	if this.IsLogin == 0 {
 		this.ResponseJson(false, "您当前未登录，请先登录")
 	}
@@ -84,7 +84,7 @@ func (this *UploadController) Post() {
 	}
 
 	// 文档处理
-	fmt.Println("UploadController Post " )
+	fmt.Println("UploadController Post -DocumentProcess" )
 	err = models.DocumentProcess(this.IsLogin, form)
 	if err != nil {
 		this.ResponseJson(false, err.Error())
