@@ -63,7 +63,7 @@ func (this *UploadController) Post() {
 	}
 
 	this.ParseForm(&form)
-
+	fmt.Println("UploadController Post - after ParseForm" )
 	//文件在文档库中未存在，则接收文件并做处理
 	f, fh, err := this.GetFile("File")
 	if err == nil {
