@@ -127,4 +127,7 @@ func weixin() {
 	// 用于文档列表的访问
 	beego.Router("/wx/list/:chanel", &WeixinControllers.ListController{})
 	beego.Router("/wx/list/:chanel/*", &WeixinControllers.ListController{})
+
+	// 用于搜索文档
+	beego.Router("/wx/search/*", &WeixinControllers.SearchController{})
 }

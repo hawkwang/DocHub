@@ -148,5 +148,6 @@ func (this *SearchController) Get() {
 	this.Data["SearchLog"] = models.NewSearchLog().List(1, 10)
 	this.Layout = ""
 	this.Data["PageId"] = "wenku-search"
-	this.TplName = "index.html"
+	// this.TplName = "index.html"
+	this.ResponseJson(true, "获得相关文档", this.Data["Data"])
 }
